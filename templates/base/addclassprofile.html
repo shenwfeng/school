@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}班级信息{% endblock %}
+{% block content %}
+<div class="row text-center  vertical-middle-sm">
+    <h1><strong>添加班级信息</strong></h1>
+    <form class="form-horizontal" action="." method="post">
+        {% csrf_token %}
+        <div class="form">
+
+            {{ form.as_p}}
+
+        </div>
+        <input class="btn btn-lg" type="submit" value="添加">
+    </form>
+
+</div>
+
+
+{% endblock %}

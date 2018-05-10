@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}学校介绍{% endblock %}
+{% block content %}
+<div class="row text-center  vertical-middle-sm">
+    <h1><strong>添加学校简介</strong></h1>
+    <form class="form-horizontal" action="." method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="{{ form.schoolname.id_for_label }}" class="col-md-4 text-right">学校名称</label>
+            <div class="col-md-5 text-left">{{ form.schoolname }}</div>
+        </div>
+        <div class="form-group">
+            <label for="{{ form.schoolinfo.id_for_label }}" class="col-md-4 text-right">学校简介</label>
+            <div class="col-md-5 text-left">{{ form.schoolinfo }}</div>
+        </div>
+        <input class="btn btn-lg" type="submit" value="添加">
+    </form>
+
+</div>
+
+
+{% endblock %}
